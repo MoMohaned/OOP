@@ -127,17 +127,19 @@ public class loginGui extends javax.swing.JFrame {
         
         jAccountNoTF.setText("");
         jPinTF.setText("");
+        //testing lines
         System.out.println("account "  + accountNo);
         System.out.println("pin "  + pin);
         
         //validAccountNo = atm.isValidAccountNo();
         
         //validPin = atm.isValidPin();
+        //testing lines
         System.out.println("validAccountNo"  +validAccountNo);
         System.out.println("validPin"  +validPin);
        
         if (validAccountNo && validPin) {
-            JOptionPane.showMessageDialog(null, "welcome " + accountNo);
+            JOptionPane.showMessageDialog(null, "Welcome, Thank you for using our bank, Your account number is " + accountNo);
             
             AtmGui gui = new AtmGui();
             gui.setVisible(true);
@@ -150,8 +152,8 @@ public class loginGui extends javax.swing.JFrame {
             validLogin = log.isValidLogin();
             
         } else if(!validAccountNo || !validPin) {
-            JOptionPane.showMessageDialog(null, "Not a real account number,"
-                    + "\nMust be atleast 10 digits\n"); 
+            JOptionPane.showMessageDialog(null, "Not a real Account number,"
+                    + "\nMust be 10 digits.\n"); 
         
         
     }//GEN-LAST:event_jbtnLoginActionPerformed

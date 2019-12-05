@@ -57,7 +57,7 @@ public class Account {
         System.out.print(accountNo);
         System.out.print(pin);
         
-        balance = ThreadLocalRandom.current().nextDouble(1000.0, 5000.0);
+        balance = ThreadLocalRandom.current().nextDouble(100.0, 500.0);
         balance = Math.round(balance * 100.0) / 100.0;
         System.out.println(balance);
     }

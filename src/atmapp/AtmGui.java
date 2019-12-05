@@ -348,6 +348,7 @@ public class AtmGui extends javax.swing.JFrame {
 
         jPanel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
 
+        jlblDisplay.setText("               Please Enter your personal Bank Pin");
         jlblDisplay.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
 
         jlblBalance.setText("Balance");
@@ -670,6 +671,10 @@ public class AtmGui extends javax.swing.JFrame {
 
     private void jReceiptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jReceiptActionPerformed
         // TODO add your handling code here:
+        Account acc = new Account();
+        acc.setAccountNo(accountNo);
+        
+        //to get balance method needs contents
         
         //calender time
             Calendar timer = Calendar.getInstance();
@@ -684,7 +689,9 @@ public class AtmGui extends javax.swing.JFrame {
         jReceiptTA.append("\t         Thank You For \n "
                 + "\t        Using Our Bank\n "
                 + "\t        Your Receipt is:\n\n\n"
-                + "Balance:\t\t\t 100000"
+                + "Balance:\t\t\t 100000 " 
+                + acc.getBalance() 
+                
                 + "\n ===============================================\t "
                 + "\n\n\n\nDate: " + tDate.format(timer.getTime())
                 + "\nTime: " + tTime.format(timer.getTime())
@@ -732,6 +739,7 @@ public class AtmGui extends javax.swing.JFrame {
 
     private void jbtnBalanceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnBalanceActionPerformed
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_jbtnBalanceActionPerformed
 
     private void jbtnWithdrawActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnWithdrawActionPerformed
